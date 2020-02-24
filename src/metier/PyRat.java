@@ -4,11 +4,13 @@ import java.util.*;
 
 public class PyRat {
 private Map<Point, Point> points;
+private Set<Point> hashSetFromages;
     /* Méthode appelée une seule fois permettant d'effectuer des traitements "lourds" afin d'augmenter la performace de la méthode turn. */
     public void preprocessing(Map<Point, List<Point>> laby, int labyWidth, int labyHeight, Point position, List<Point> fromages) {
         this.points = new HashMap<>();
+        setFromages = new HashSet<>();
         for(Point pt : fromages){
-            points.put(pt, pt);
+            setFromages.add(p);
         }
     }
 
@@ -37,8 +39,7 @@ private Map<Point, Point> points;
     /* Regarde de manière performante (accès en ordre constant) s’il y a un fromage à la position pos.
         @return true s'il y a un fromage à la position pos, false sinon. */
     private boolean fromageIci_EnOrdreConstant(Point pos) {
-        if(points.get(pos) != null){return true;}
-        return false;
+        return hashSetFromgaes.contains(pos);
     }
 
     /* Indique si le joueur peut passer de la position (du Point) « de » au point « a ».
