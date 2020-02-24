@@ -3,11 +3,9 @@ package metier;
 import java.util.*;
 
 public class PyRat {
-private Map<Point, Point> points;
 private Set<Point> hashSetFromages;
     /* Méthode appelée une seule fois permettant d'effectuer des traitements "lourds" afin d'augmenter la performace de la méthode turn. */
     public void preprocessing(Map<Point, List<Point>> laby, int labyWidth, int labyHeight, Point position, List<Point> fromages) {
-        this.points = new HashMap<>();
         setFromages = new HashSet<>();
         for(Point pt : fromages){
             setFromages.add(p);
